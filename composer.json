@@ -1,0 +1,24 @@
+{
+    "name": "delphi/parserutils",
+    "description": "Common utilities for working with PHPParser",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Sartain",
+            "email": "tomsartain@gmail.com"
+        }
+    ],
+    "require": {
+        "nikic/php-parser": "^4"
+    },
+    "autoload": {
+        "psr-4": {
+            "delphi\\ParserUtils\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "delphi\\ParserUtils\\": "tests/"
+        }
+    }
+}
