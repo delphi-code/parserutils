@@ -2,6 +2,7 @@
 
 namespace delphi\ParserUtils;
 
+use delphi\ParserUtils\Exception\UnexpectedNodeType;
 use PhpParser\Node;
 use SebastianBergmann\Type\Type;
 use SebastianBergmann\Type\UnknownType;
@@ -50,7 +51,7 @@ class Helper
             return sprintf('[%s]', $contents);
         }
 
-        return ' ¯\_(ツ)_/¯' . get_class($node);
+        throw new UnexpectedNodeType($node);
     }
 
     public function typeDebug(Type $type) {
